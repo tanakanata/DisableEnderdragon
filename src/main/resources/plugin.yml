@@ -1,0 +1,6 @@
+name: DisableEnderdragon
+version: '${project.version}'
+main: com.github.tanakanata.disableenderdragon.DisableEnderdragon
+api-version: 1.17
+authors: [ tanaka1616 ]
+description: Disable Enderdragon Re-summon
