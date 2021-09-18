@@ -1,13 +1,10 @@
 package com.github.tanakanata.disableenderdragon;
 
-import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.World;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
-import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class DisableEnderdragon extends JavaPlugin implements Listener {
@@ -35,6 +32,10 @@ public final class DisableEnderdragon extends JavaPlugin implements Listener {
         }
         //使用したアイテムがエンドクリスタルか判定
         if (event.getMaterial() != Material.END_CRYSTAL ) {
+            return;
+        }
+        //nullチェック
+        if (event.getClickedBlock() == null){
             return;
         }
         //クリックしたブロックが岩盤かどうか判定
