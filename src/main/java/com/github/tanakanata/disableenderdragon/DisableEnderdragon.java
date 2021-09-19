@@ -12,7 +12,6 @@ public final class DisableEnderdragon extends JavaPlugin implements Listener {
     public void onEnable() {
         // Plugin startup logic
         this.getServer().getPluginManager().registerEvents(this, this);
-        getLogger().info("有効化しました。");
     }
 
     @Override
