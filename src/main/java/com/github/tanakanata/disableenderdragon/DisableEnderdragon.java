@@ -20,25 +20,25 @@ public final class DisableEnderdragon extends JavaPlugin implements Listener {
     }
 
     @EventHandler
-    public void onPlayerInteractEvent(PlayerInteractEvent event){
+    public void onPlayerInteractEvent(PlayerInteractEvent event) {
         //ブロック設置のイベントか判定
         if (!event.hasBlock()){
             return;
         }
         //イベントが発生したディメンションがエンドか判定
-        if (event.getPlayer().getWorld().getEnvironment() != World.Environment.THE_END){
+        if (event.getPlayer().getWorld().getEnvironment() != World.Environment.THE_END) {
             return;
         }
         //使用したアイテムがエンドクリスタルか判定
-        if (event.getMaterial() != Material.END_CRYSTAL ) {
+        if (event.getMaterial() != Material.END_CRYSTAL) {
             return;
         }
         //nullチェック
-        if (event.getClickedBlock() == null){
+        if (event.getClickedBlock() == null) {
             return;
         }
         //クリックしたブロックが岩盤かどうか判定
-        if (event.getClickedBlock().getType() != Material.BEDROCK){
+        if (event.getClickedBlock().getType() != Material.BEDROCK) {
             return;
         }
         //設置イベントをキャンセル
